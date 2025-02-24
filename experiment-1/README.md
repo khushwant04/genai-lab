@@ -7,6 +7,9 @@
 - Perform vector arithmetic and analyze word relationships.
 - Evaluate the quality of vector arithmetic using cosine similarity.
 
+### Introduction:
+In this experiment, you will explore how words can be represented using numerical vectors. Pre-trained word vectors capture semantic meanings from large datasets. By using vector arithmetic, we can examine how words relate to each other mathematically (e.g., "king - man + woman = queen"). We will also use cosine similarity to measure how close the computed vectors are to actual word embeddings. This helps us analyze the effectiveness of the model in understanding relationships between words.
+
 ### Tools and Libraries:
 - Python
 - PyTorch

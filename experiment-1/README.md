@@ -5,6 +5,7 @@
 ### Objective:
 - Explore pre-trained word vectors using the Sentence Transformer model.
 - Perform vector arithmetic and analyze word relationships.
+- Evaluate the quality of vector arithmetic using cosine similarity.
 
 ### Tools and Libraries:
 - Python
@@ -39,9 +40,10 @@ print("Word Embeddings Shape:", embeddings.shape)
 
 ```python
 import numpy as np
+from sklearn.metrics.pairwise import cosine_similarity
 
 def find_closest(embedding, embeddings, words):
-    similarities = np.dot(embeddings, embedding)
+    similarities = cosine_similarity([embedding], embeddings)[0]
     closest_idx = np.argsort(similarities)[::-1]
     return [(words[i], similarities[i]) for i in closest_idx]
 
@@ -78,16 +80,18 @@ plt.show()
 ### Step 4: Analyze Results
 - Observe how similar words cluster together.
 - Perform more arithmetic operations and analyze semantic relationships.
+- Evaluate the correctness of results using cosine similarity.
 
 ### Expected Output
 1. Embeddings shape.
-2. Closest words based on arithmetic.
+2. Closest words based on arithmetic and cosine similarity.
 3. PCA visualization plot.
 
 ### Conclusion
 You have successfully used the Sentence Transformer model to:
 - Generate embeddings for words.
 - Perform vector arithmetic.
+- Evaluate the accuracy using cosine similarity.
 - Visualize and interpret the relationships between word embeddings.
 
 This foundation will help in building advanced Generative AI applications.
